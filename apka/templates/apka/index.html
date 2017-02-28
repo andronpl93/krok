@@ -1,0 +1,14 @@
+
+    <html>
+        <head>
+            <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+
+        </head>
+        <body>
+				<form action="/parser/" method="post" >{% csrf_token %}
+                    <input type='text' name ='url'>
+                    <input type="submit" value="OK">
+                </form>
+        {{text}}
+        </body>
+    </html>
