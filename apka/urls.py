@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^odmen/', admin.site.urls),
     url(r'^$', views.start),
     url(r'^parser/$', views.parser),
+    url(r'^editLan/$', views.editLan),
 ]
