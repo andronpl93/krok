@@ -2,31 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6fe5977-f7f2-4d36-9fe0-20b90ea92fb8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/css/book.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/css/booklet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/css/login.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/css/tests/show.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/js/book.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/js/booklet.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/js/tests/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/js/tests/show.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/js/tests/training.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/templates/apka/book.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/templates/apka/booklet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/templates/apka/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/templates/apka/tests/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/templates/apka/tests/show.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/templates/apka/tests/training.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/bgPanel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/bgPanel2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/bgPanel3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/bgPanel4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/bgPanel5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/enter.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/fb.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/gp.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/lang/eng.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/lang/rus.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/lang/ukr.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/logout.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/vk.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/migrations/0002_auto_20170302_0541.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/migrations/0003_auto_20170302_1948.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/migrations/0004_panel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/migrations/0005_remove_panel_t10.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/migrations/0006_remove_panel_type.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/migrations/0007_bottomlang.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/migrations/0008_auto_20170303_0306.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/migrations/0009_auto_20170304_0343.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/js/jquery_1_9_2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/templates/apka/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/admin.py" afterPath="$PROJECT_DIR$/apka/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/models.py" afterPath="$PROJECT_DIR$/apka/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/static/css/header.css" afterPath="$PROJECT_DIR$/apka/static/css/header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/static/css/home.css" afterPath="$PROJECT_DIR$/apka/static/css/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/static/js/main.js" afterPath="$PROJECT_DIR$/apka/static/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/templates/apka/home.html" afterPath="$PROJECT_DIR$/apka/templates/apka/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/urls.py" afterPath="$PROJECT_DIR$/apka/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/views.py" afterPath="$PROJECT_DIR$/apka/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/krok/settings.py" afterPath="$PROJECT_DIR$/krok/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -566,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488478735457</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="регистрация, тесты&#10;">
+      <created>1488646995028</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1488646995028</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">

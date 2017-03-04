@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+{% load socialaccount %}
+<html>
+<head>
+	<title>{%block title%} {%endblock%}</title>
+    <meta name="description" content="Тестування крок">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="{% static 'css/header.css' %}" rel='stylesheet' type='text/css'>
+    {% block link %} {% endblock %}
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}"/>
+
+</head>
+
+<body>
+
+<header >
+    {% if user.is_authenticated%}
+    <div id="logout">
+        {{user.first_name}} {{user.last_name}}<br/>
+        <form  method="post" action="{% url 'account_logout' %}">
+                {% csrf_token %}
+                {% if redirect_field_value %}
+                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                {% endif %}
+           <img src="{%static 'img/logout.gif'%}" id="imSub" />
+        </form>
+    </div>
+    {%else%}
+    <a href ='/login/' id="register">
+         <p>Войти</p>
+         <img src="{%static 'img/enter.gif' %}" id="ent_img" />
+
+    </a>
+    {%endif%}
+    <ul>
+        {% for l in lang %}
+            <li data-index="{{l.code}}" {%ifequal l.code globLang %} class="active" {%endifequal%}>
+                        <img src="{{STATIC_PREFIX}}img/{{l.img}}" class='lang_img'/>
+            </li>
+        {% endfor %}
+
+    </ul>
+
+</header>
+
+<div id='wrap'>   {% block content%} {%endblock%} </div>
+
+{%block footer%} {% endblock%}
+</body>
+    <script src="{% static 'js/jquery_1_9_2.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    {%block script%} {%endblock%}
+
+</html>
