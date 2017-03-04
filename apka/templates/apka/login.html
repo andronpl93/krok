@@ -1,0 +1,28 @@
+{% extends "apka\base.html" %}
+{% load static %}
+{% load socialaccount %}
+{%block link%}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    {%block link2%}{%endblock%}
+{%endblock%}
+
+{% block title%}Регистрация{% endblock%}
+
+{% block content%}
+<p><span>Выберите любую удобную для вас социальную сеть</span><br/>
+Для того чтобы иметь возможность сохранять вопросы и работать над ошибками необходими зарегистрироваться</p>
+
+
+
+        <a href="{% provider_login_url 'vk' %}"><div><img src='{% static "img/vk.gif" %}'></div></a>
+        <a href="{% provider_login_url 'facebook' %}"><div><img src='{% static "img/fb.gif" %}'></div></a>
+        <a href="{% provider_login_url 'google' %}"><div><img src='{% static "img/gp.gif" %}'></div></a>
+
+<div id="line"></div>
+
+    {%block book%}{%endblock%}
+
+{%endblock%}
+
+
+

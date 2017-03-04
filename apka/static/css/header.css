@@ -8,11 +8,12 @@ body{
 }
 #wrap{
     width:100%;
+
 }
 header{
     width:100%;
     height:12vh;
-    background-color: #F8F8FF;
+    background:#EDEEF0 url('../img/bg.png');
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
       overflow: hidden;
 }
@@ -79,10 +80,12 @@ header ul li img{
 
 }
 #register{
+    display: block;
     height: 100%;
     width: 12%;
     float: right;
     padding: 0 1%;
+    color:#000;
 }
 
 #ent_img{
@@ -94,4 +97,24 @@ MARGIN-TOP: 2vh;
 #register #ent_img,p{
     float: right;
     font-size: 160%;
+}
+
+#logout{
+    float: right;
+    height: 100%;
+    font-size: 120%;
+    width: 12vw;
+
+
+}
+#logout botton{
+    border: none;
+}
+#logout img{
+    padding-top: 7%;
+    width: 8vw;
+    margin-left: 15%;
+}
+#logout img:hover{
+    cursor: pointer;
 }

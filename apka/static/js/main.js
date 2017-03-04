@@ -11,10 +11,13 @@ var objAjax={
                 timeout:50000,
                 error: function(){alert('ошибка')},
                 success: function(){window.location.reload();},
-                url:'editLan/',
+                url:'/editLan/',
             };
 
+$('#imSub').click(function(){
+    $('#logout form').submit();
 
+});
 
 
 /*csrf_token */

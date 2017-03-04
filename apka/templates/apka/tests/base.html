@@ -1,0 +1,69 @@
+{% extends "apka\booklet.html" %}
+{% load static %}
+{%block link2%}
+    <link rel="stylesheet" href="{% static 'css/tests/show.css' %}">
+{%endblock%}
+{%block book%}
+<section id="content2">
+    <h2>{{b.title}}</h2>
+    <div id ='coun'>
+        Число вопросов:
+        <select>
+            {%for r in ran%}
+                <option>{{r}}</option>
+            {%endfor%}
+            <option selected>200</option>
+
+        </select>
+    </div>
+    <hr/>
+<ul style="list-style-type:decimal;">
+   {%for q in tests%}
+    <li>
+        {% autoescape off %}
+            <span>{{q.question}}</span>
+        {% endautoescape %}
+        <ul style="list-style-type:upper-alpha;">
+            <li>
+                {% autoescape off  %}
+                <b> <span>{{q.reply_1}}</span></b>
+                {% endautoescape %}
+            </li>
+            <li>
+                {% autoescape off  %}
+                    <span>{{q.reply_2}}</span>
+                {% endautoescape %}
+            </li>
+            <li>
+                {% autoescape off  %}
+                    <span>{{q.reply_3}}</span>
+                {% endautoescape %}
+            </li>
+            <li>
+                {% autoescape off  %}
+                    <span>{{q.reply_4}}</span>
+                {% endautoescape %}
+            </li>
+            <li>
+                {% autoescape off  %}
+                    <span>{{q.reply_5}}</span>
+                {% endautoescape %}
+            </li>
+        </ul>
+        <div class="line"></div>
+        <br/>
+    </li>
+    {%endfor%}
+
+</ul>
+
+    <div class="line"></div>
+</section>
+
+
+{%endblock%}
+
+
+        {%block script2%}
+             <script src="{% static 'js/tests/base.js' %}"></script>
+        {%endblock%}

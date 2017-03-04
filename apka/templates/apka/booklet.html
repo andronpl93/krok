@@ -1,0 +1,35 @@
+{% extends "apka\base.html" %}
+{% load static %}
+{%block link%}
+    <link rel="stylesheet" href="{% static 'css/booklet.css' %}">
+    {%block link2%}{%endblock%}
+{%endblock%}
+
+{% block title%}{{title}}{% endblock%}
+
+
+
+{% block content%}
+
+<nav>
+    <a  href="/krok/{{num}}/show">{{linkPanel.t1}}</a>
+    <a href="/krok/{{num}}/download">{{linkPanel.t2}}</a>
+    <a href="/krok/{{num}}/view">{{linkPanel.t3}}</a>
+    <a href="/krok/{{num}}/error-list">{{linkPanel.t4}}</a>
+    <a href="/krok/{{num}}/save">{{linkPanel.t5}}</a>
+    <a href="/krok/{{num}}/search">{{linkPanel.t6}}</a>
+    <a href="/krok/{{num}}/faq">{{linkPanel.t7}}</a>
+    <a href="/krok/{{num}}/blank">{{linkPanel.t8}}</a>
+    <a href="/krok/{{num}}/prepare">{{linkPanel.t9}}</a>
+</nav>
+
+
+    {%block book%}{%endblock%}
+
+{%endblock%}
+       {%block script%}
+                <script src="{% static 'js/booklet.js' %}"></script>
+        {%block script2%} {%endblock%}
+        {%endblock%}
+
+

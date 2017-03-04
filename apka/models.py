@@ -12,10 +12,11 @@ class Lang(models.Model):
             verbose_name_plural = u'Языки'
 
 class Classes(models.Model):
-    title=models.CharField('Название класа, прим. КРОК 1 - атология',max_length=300)
-    lang = models.ForeignKey(Lang, on_delete=models.PROTECT,null=True)
+    rus=models.CharField('Русский',max_length=300,null=True)
+    ukr=models.CharField('Украинский',max_length=300,null=True)
+    eng=models.CharField('Английский',max_length=300,null=True)
     def __str__(self):
-        return str(self.title)
+        return str(self.id)+"."+str(self.rus)
 
     class Meta:
             verbose_name = u'Клас'
@@ -27,7 +28,7 @@ class Classes(models.Model):
 
 class Booklets(models.Model):
     title = models.CharField('Название буклета, прим. Буклет 2016 року', max_length=300)
-    classes  = models.ForeignKey(Classes,on_delete=models.CASCADE)
+    classes  = models.ForeignKey(Classes,on_delete=models.SET_NULL,null=True)
     lang  = models.ForeignKey(Lang,on_delete=models.PROTECT)
     def __str__(self):
         return str(self.title+'('+str(self.lang)+" / "+str(self.classes)+")")
@@ -52,3 +53,20 @@ class Booklet(models.Model):
 
 
 
+class Panel(models.Model):
+    t1=models.CharField('',max_length=300)
+    t2=models.CharField('',max_length=300)
+    t3=models.CharField('',max_length=300)
+    t4=models.CharField('',max_length=300)
+    t5=models.CharField('',max_length=300)
+    t6=models.CharField('',max_length=300)
+    t7=models.CharField('',max_length=300)
+    t8=models.CharField('',max_length=300)
+    t9=models.CharField('',max_length=300)
+    lang = models.ForeignKey(Lang, on_delete=models.PROTECT,null=True)
+
+class bottomLang(models.Model):
+    t1=models.CharField('Розпочати тестування ',max_length=300)
+    t2=models.CharField('Розповчати навчання',max_length=300)
+    t3=models.CharField('Переглянути базу',max_length=300)
+    lang = models.ForeignKey(Lang, on_delete=models.PROTECT, null=True)

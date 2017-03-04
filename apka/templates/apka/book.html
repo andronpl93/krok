@@ -1,0 +1,35 @@
+{% extends "apka\booklet.html" %}
+{% load static %}
+{%block link2%}
+    <link rel="stylesheet" href="{% static 'css/book.css' %}">
+{%endblock%}
+
+{%block book%}
+    <section id="content">
+    {%for b in bl %}
+        <div class="list">
+            <span>{{b.title}}</span>
+            <hr/>
+            <a href="show/tests/{{b.id}}/" class="bt">{{bat.t1}}
+                <div class="a"></div>
+                <div class="b"></div>
+                <div class="c"></div>
+                <div class="d"></div>
+            </a>
+            <a href="show/training/{{b.id}}/" class="bt">{{bat.t2}}
+                <div class="a"></div>
+                <div class="b"></div>
+                <div class="c"></div>
+                <div class="d"></div>
+            </a>
+            <a href="show/base/{{b.id}}/" class="bt">{{bat.t3}}
+                <div class="a"></div>
+                <div class="b"></div>
+                <div class="c"></div>
+                <div class="d"></div>
+            </a>
+        </div>
+    {%endfor%}
+        </section>
+{%endblock%}
+
