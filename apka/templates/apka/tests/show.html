@@ -2,7 +2,9 @@
 {% load static %}
 {%block link2%}
     <link rel="stylesheet" href="{% static 'css/tests/show.css' %}">
+    <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
 {%endblock%}
+{% block back%} <a href="/show{{num}}" id="back"><img src="{%static 'img/back.gif'%}">Назад</a>{%endblock%}
 {%block book%}
 <section id="content2">
     <h2>{{b.title}}</h2>
@@ -19,7 +21,10 @@
     <hr/>
 <ul style="list-style-type:decimal;">
    {%for q in tests%}
-    <li>
+    <li  data-id="{{q.id}}">
+        {% if user.is_authenticated%}
+             <img class="star" src="{%static 'img/star.gif'%}" data-index="{{q.id}}" alt="Сохранить вопрос" title="Сохранить вопрос"/>
+        {%endif%}
         {% autoescape off %}
             <span>{{q.title}}</span>
         {% endautoescape %}
@@ -46,7 +51,14 @@
     <div class="line"></div>
 </section>
 
-
+        <div id="preloader">
+            <div class="cssload-tetrominos">
+                    <div class="cssload-tetromino cssload-box1"></div>
+                    <div class="cssload-tetromino cssload-box2"></div>
+                    <div class="cssload-tetromino cssload-box3"></div>
+                    <div class="cssload-tetromino cssload-box4"></div>
+            </div>
+        </div>
 {%endblock%}
 
 

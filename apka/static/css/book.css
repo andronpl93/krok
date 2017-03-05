@@ -21,7 +21,9 @@
 .list    span{
     color:#FFF;
     font-size: 250%;
+    text-align: center;
     text-shadow:
+
     0 -1px 0 #82DFF1,
                0 6px 1px rgba(0,0,0,.5),
                0 0 5px rgba(0,0,0,.5),

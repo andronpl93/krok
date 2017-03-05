@@ -2,6 +2,7 @@ mass=[]
 for(var i =0;i<200;i++){
     mass[i]=i;
 }
+var coun=$('#content2 select').val();
 $('#content2 > ul > li > ul >li').click(
     function(){
         if($(this).hasClass('tr'))
@@ -19,14 +20,16 @@ $('#content2 select').change(function(){
     var a;
     massL=mass.slice();
     massL2=mass.slice();
-    for (var i=0;i<200-parseInt($(this).val());i++){
+
+    for (var i=0;i<coun-parseInt($(this).val());i++){
          b=randM(massL);
+
         $("#content2>ul>li").slice(b,b+1).fadeOut(300);
     }
 });
 function randM(m){
     while(true){
-       a=Math.floor(Math.random()*199);
+       a=Math.floor(Math.random()*(coun-1));
         if(m[a]!=null){
            v=m[a];
            m[a]=null;
@@ -34,3 +37,5 @@ function randM(m){
         }
     }
 }
+
+$('header li').addClass('testsL');

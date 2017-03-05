@@ -1,29 +1,20 @@
-$('header li').bind('click',function(){
-    if(!$(this).hasClass('testsL')){
-    $('header li.active').removeClass('active');
-    $(this).addClass('active');
-    objAjax.url='/editLan/';
-    objAjax.data=  {'globLang': $('header li.active').attr('data-index')};
-    $.ajax(objAjax);
+var objAjax3={
+                type:'POST',
+                timeout:50000,
+                success: function(data){
+                         $('.star[data-index='+data+']').addClass('starAct');
+                },
+                url:'/star/',
+            };
+$('body').click(function(){
+
+    if (event.target.className=='star'){
+        self=$(event.target);
+        objAjax3.data={'id':self.attr('data-index')};
+        $.ajax(objAjax3);
     }
 });
 
-
-var objAjax={
-                type:'POST',
-                timeout:50000,
-                error: function(){alert('ошибка')},
-                success: function(){window.location.reload();},
-
-            };
-
-$('#imSub').click(function(){
-    $('#logout form').submit();
-
-});
-
-
-/*csrf_token */
 
  function getCookie(name) {
     var cookieValue = null;

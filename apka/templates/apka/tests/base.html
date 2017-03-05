@@ -3,6 +3,7 @@
 {%block link2%}
     <link rel="stylesheet" href="{% static 'css/tests/show.css' %}">
 {%endblock%}
+{% block back%} <a href="/show{{num}}" id="back"><img src="{%static 'img/back.gif'%}" >Назад</a>{%endblock%}
 {%block book%}
 <section id="content2">
     <h2>{{b.title}}</h2>
@@ -20,6 +21,9 @@
 <ul style="list-style-type:decimal;">
    {%for q in tests%}
     <li>
+        {% if user.is_authenticated%}
+             <img class="star" src="{%static 'img/star.gif'%}" data-index="{{q.id}}" alt="Сохранить вопрос" title="Сохранить вопрос"/>
+        {%endif%}
         {% autoescape off %}
             <span>{{q.question}}</span>
         {% endautoescape %}

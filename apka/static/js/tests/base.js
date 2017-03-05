@@ -13,6 +13,7 @@ $('#content2 select').change(function(){
         $("#content2>ul>li").slice(b,b+1).fadeOut(300);
     }
 });
+
 function randM(m){
     while(true){
        a=Math.floor(Math.random()*199);
@@ -23,3 +24,6 @@ function randM(m){
         }
     }
 }
+
+
+$('header li').addClass('testsL');

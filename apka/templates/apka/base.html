@@ -16,31 +16,34 @@
 <body>
 
 <header >
-    {% if user.is_authenticated%}
-    <div id="logout">
-        {{user.first_name}} {{user.last_name}}<br/>
-        <form  method="post" action="{% url 'account_logout' %}">
-                {% csrf_token %}
-                {% if redirect_field_value %}
-                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-                {% endif %}
-           <img src="{%static 'img/logout.gif'%}" id="imSub" />
-        </form>
-    </div>
-    {%else%}
-    <a href ='/login/' id="register">
-         <p>Войти</p>
-         <img src="{%static 'img/enter.gif' %}" id="ent_img" />
+    <a href="/" id="glav">КРОК</a>
+   {%block back%} {%endblock%}
 
-    </a>
+    {% if user.is_authenticated%}
+        <div id="logout">
+            {{user.first_name}} {{user.last_name}}<br/>
+            <form  method="post" action="{% url 'account_logout' %}">
+                    {% csrf_token %}
+                    {% if redirect_field_value %}
+                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                    {% endif %}
+               <img src="{%static 'img/logout.gif'%}" id="imSub" />
+            </form>
+        </div>
+    {%else%}
+        <a href ='/login/' id="register">
+             <p>Войти</p>
+             <img src="{%static 'img/enter.gif' %}" id="ent_img" />
+
+        </a>
     {%endif%}
+
     <ul>
         {% for l in lang %}
             <li data-index="{{l.code}}" {%ifequal l.code globLang %} class="active" {%endifequal%}>
                         <img src="{{STATIC_PREFIX}}img/{{l.img}}" class='lang_img'/>
             </li>
         {% endfor %}
-
     </ul>
 
 </header>

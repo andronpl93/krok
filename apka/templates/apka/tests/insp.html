@@ -1,0 +1,36 @@
+{% load static %}
+<div id="er">Правильных ответов: <span class="Tr">{{tr}}%</span><br/>
+Допущено ошибок: <span class="fa">{{fa}}%</span>
+<hr/>
+{% if not user.is_authenticated%}
+    Чтобы иметь возможность сохранять ошибки необходимо <a href="/login/">Войти</a><br/>
+{%endif%}
+{%if fa %}
+    <b>Вы допустили ошибку в следущих вопросах:</b>
+{%endif%}
+</div>
+<ul style="list-style-type:decimal;">
+   {%for q in ans%}
+    <li >
+        {% if user.is_authenticated%}
+             <img class="star" src="{%static 'img/star.gif'%}" data-index="{{q.id}}" alt="Сохранить вопрос" title="Сохранить вопрос"/>
+        {%endif%}
+        {% autoescape off %}
+            <span>{{q.title}}</span>
+        {% endautoescape %}
+        <ul style="list-style-type:upper-alpha;">
+            {%for i in q.m %}
+                <li>
+                    {% autoescape off  %}
+                        <span class="{{i.cl}}">{{i.v}}</span>
+                    {% endautoescape %}
+                </li>
+            {%endfor%}
+        </ul>
+        <div class="line"></div>
+        <br/>
+    </li>
+    {%endfor%}
+
+</ul>
+<div class="line"></div>

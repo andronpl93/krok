@@ -4,31 +4,46 @@
     <link rel="stylesheet" href="{% static 'css/book.css' %}">
 {%endblock%}
 
+
+
 {%block book%}
     <section id="content">
     {%for b in bl %}
+        {%if forloop.first%}
+        <div class="list">
+            <span> {%ifequal 'ukr' globLang %}{{ b.classes.ukr }} {%endifequal%}
+                   {%ifequal 'rus' globLang %}{{ b.classes.rus }} {%endifequal%}
+                   {%ifequal 'eng' globLang %}{{ b.classes.eng }} {%endifequal%}</span>
+
+        </div>
+        {%endif%}
         <div class="list">
             <span>{{b.title}}</span>
             <hr/>
-            <a href="show/tests/{{b.id}}/" class="bt">{{bat.t1}}
+            <a href="/show{{num}}/tests/{{b.id}}/" class="bt">{{bat.t1}}
                 <div class="a"></div>
                 <div class="b"></div>
                 <div class="c"></div>
                 <div class="d"></div>
             </a>
-            <a href="show/training/{{b.id}}/" class="bt">{{bat.t2}}
+            <a href="/show{{num}}/training/{{b.id}}/" class="bt">{{bat.t2}}
                 <div class="a"></div>
                 <div class="b"></div>
                 <div class="c"></div>
                 <div class="d"></div>
             </a>
-            <a href="show/base/{{b.id}}/" class="bt">{{bat.t3}}
+            <a href="/show{{num}}/base/{{b.id}}/" class="bt">{{bat.t3}}
                 <div class="a"></div>
                 <div class="b"></div>
                 <div class="c"></div>
                 <div class="d"></div>
             </a>
         </div>
+
+     {%empty%}
+       <div class="list">
+            <span>{{content.notone}}</span>
+       </div>
     {%endfor%}
         </section>
 {%endblock%}

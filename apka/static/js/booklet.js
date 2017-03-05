@@ -1,8 +1,7 @@
 loc=window.location.toString();
 
 $('nav a').each(function (){
-    h=$(this).attr('href');
-    h=h.slice(h.lastIndexOf('/')+1);
+    h=$(this).attr('data-href');
     if(loc.indexOf(h)!=-1){
         $(this).addClass('active');
     }
@@ -11,3 +10,22 @@ $('nav a').each(function (){
         $(this).removeClass('active');
     }
 });
+
+
+
+    if($(this).scrollTop() > 500) {
+        $('#toTop').fadeIn(0);
+    }else{
+        $('#toTop').fadeOut(0);
+    }
+$(window).scroll(function() {
+    if($(this).scrollTop() > 500) {
+        $('#toTop').fadeIn(1000);
+    }else{
+        $('#toTop').fadeOut(1000);
+    }
+});
+$('#toTop').click(function() {
+    $('body,html').animate({scrollTop:0},800);
+});
+

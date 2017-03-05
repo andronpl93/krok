@@ -1,19 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
+from django.core.exceptions import ObjectDoesNotExist
 import urllib.request as ul
-from .models import Lang,Classes,Booklets,Booklet,Panel,bottomLang
+from .models import Lang,Classes,Booklets,Booklet,Panel,bottomLang,Saveq,Errors,Content
 from bs4 import BeautifulSoup
 import logging
+import json
 from random import shuffle
 
 globLang='ukr'
 lang = Lang.objects.all()
 lang2 = Lang.objects.get(code=globLang)
 def start(request):
-
     krok=Classes.objects.all()
-
     return render(request, 'apka/home.html', {'li':krok,'lang':lang,'globLang':globLang})
 
 def editLan(request):
@@ -24,16 +24,21 @@ def editLan(request):
     lang2 = Lang.objects.get(code=globLang)
     return HttpResponse("1")
 
-def show(request,num=1):
+def show(request,num=-1):
     linkPanel=Panel.objects.get(lang=lang2)
-    cl=get_object_or_404(Classes,id=num)
+    content = Content.objects.get(lang=lang2)
+    if num==-1:
+        cl=Classes.objects.first()
+        num=cl.id
+    else:
+        cl = Classes.objects.get(id=num)
     bl=Booklets.objects.filter(classes=cl,lang=lang2).order_by('id')
     bat=bottomLang.objects.get(lang=lang2)
-    return render(request, 'apka/book.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'num':num,
-                                              'bl':bl,'bat':bat})
+    return render(request, 'apka/book.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'num':"/"+str(num),
+                                              'bl':bl,'bat':bat,'content':content})
 def login(request,num=1):
-
-    return render(request, 'apka/login.html', {'lang':lang,'globLang':globLang})
+    content=Content.objects.get(lang=lang2)
+    return render(request, 'apka/login.html', {'lang':lang,'globLang':globLang,'content':content})
 def tests(request,numCl,numB):
     linkPanel = Panel.objects.get(lang=lang2)
     b=get_object_or_404(Booklets,id=numB)
@@ -44,7 +49,8 @@ def tests(request,numCl,numB):
         a=[i.reply_1,i.reply_2,i.reply_3,i.reply_4,i.reply_5]
         shuffle(a)
         mass[-1]['m']=a
-    return render(request, 'apka/tests/show.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'num':numCl,
+        mass[-1]['id']=i.id
+    return render(request, 'apka/tests/show.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'num':"/"+str(numCl),
                                                     'ran':range(10,200,10),
                                                     'tests':mass,'b':b})
 def training(request,numCl,numB):
@@ -57,17 +63,106 @@ def training(request,numCl,numB):
         a=[{'r':i.reply_1,'c':'tr'},{'r':i.reply_2,'c':''},{'r':i.reply_3,'c':''},{'r':i.reply_4,'c':''},{'r':i.reply_5,'c':''}]
         shuffle(a)
         mass[-1]['m']=a
-    return render(request, 'apka/tests/training.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'num':numCl,
+        mass[-1]['id']=i.id
+    return render(request, 'apka/tests/training.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'num':'/'+str(numCl),
                                                     'ran':range(10,200,10),
                                                     'tests':mass,'b':b})
 def base(request,numCl,numB):
     linkPanel = Panel.objects.get(lang=lang2)
     b=get_object_or_404(Booklets,id=numB)
     mtest=Booklet.objects.filter(booklet=b)
-    return render(request, 'apka/tests/base.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'num':numCl,
+
+    return render(request, 'apka/tests/base.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'num':'/'+str(numCl),
                                                     'ran':range(10,200,10),
                                                     'tests':mtest,'b':b})
+def errors(request):
+    linkPanel = Panel.objects.get(lang=lang2)
+    content = Content.objects.get(lang=lang2)
+    if request.user.is_authenticated() and request.user.is_active:
+        mtest=Errors.objects.filter(author=request.user)
+        mass=[]
+        for i in mtest:
+            mass.append({'title':i.que.question,'m':[]})
+            a=[{'r':i.que.reply_1,'c':'tr'},{'r':i.que.reply_2,'c':''},{'r':i.que.reply_3,'c':''},{'r':i.que.reply_4,'c':''},{'r':i.que.reply_5,'c':''}]
+            shuffle(a)
+            mass[-1]['m']=a
+            mass[-1]['id']=i.id
+    else:
+        mass = []
+    return render(request, 'apka/errors.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'tests':mass,'content':content})
 
+def save(request):
+    linkPanel = Panel.objects.get(lang=lang2)
+    content = Content.objects.get(lang=lang2)
+    if request.user.is_authenticated() and request.user.is_active:
+        mtest=Saveq.objects.filter(author=request.user)
+        mass=[]
+        for i in mtest:
+            mass.append({'title':i.que.question,'m':[]})
+            a=[{'r':i.que.reply_1,'c':'tr'},{'r':i.que.reply_2,'c':''},{'r':i.que.reply_3,'c':''},{'r':i.que.reply_4,'c':''},{'r':i.que.reply_5,'c':''}]
+            shuffle(a)
+            mass[-1]['m']=a
+            mass[-1]['id']=i.id
+    else:
+        mass=[]
+    return render(request, 'apka/save.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'tests':mass,'content':content})
+
+
+
+def inspection(request):
+    pakege=json.loads(request.POST.get('jsonData'))
+    ans=[]
+    for k in pakege:
+        t=Booklet.objects.get(id=int(k))
+        if t.reply_1!=pakege[k]:
+            if request.user.is_authenticated() and request.user.is_active:
+                try:
+                    e = Errors.objects.get(author=request.user, que=t)
+                except ObjectDoesNotExist:
+                    e = Errors(author=request.user, que=t)
+                    e.save()
+            ans.append({})
+            ans[-1]['title']=t.question
+            ans[-1]['m']=[{'cl':'Tr','v':t.reply_1}]
+            ans[-1]['m'].append({'cl':'fa','v':t.reply_2}) if   t.reply_2==pakege[k] else ans[-1]['m'].append({'cl':'','v':t.reply_2})
+            ans[-1]['m'].append({'cl':'fa','v':t.reply_3}) if   t.reply_3==pakege[k] else ans[-1]['m'].append({'cl':'','v':t.reply_3})
+            ans[-1]['m'].append({'cl':'fa','v':t.reply_4}) if   t.reply_4==pakege[k] else ans[-1]['m'].append({'cl':'','v':t.reply_4})
+            ans[-1]['m'].append({'cl':'fa','v':t.reply_5}) if   t.reply_5==pakege[k] else ans[-1]['m'].append({'cl':'','v':t.reply_5})
+            ans[-1]['id']=t.id
+
+    mTrue=((len(pakege)-len(ans))/len(pakege))*100
+    mFalse=100-mTrue
+    return render(request, 'apka/tests/insp.html',{'tr':mTrue,'fa':mFalse,'ans':ans})
+
+def star(request):
+    if request.user.is_authenticated() and request.user.is_active and request.method == "POST":
+        i=request.POST.get('id')
+        try:
+            q=Booklet.objects.get(id=i)
+        except ObjectDoesNotExist:
+            return HttpResponse('-1')
+        try:
+            s=Saveq.objects.get(author=request.user,que=q)
+        except ObjectDoesNotExist:
+            s=Saveq(author=request.user,que=q)
+            s.save()
+        return HttpResponse(i)
+    else:
+        return HttpResponse('-1')
+
+def delError(request):
+    if request.user.is_authenticated() and request.user.is_active and request.method == "POST":
+        i=request.POST.get('id')
+        e=Errors.objects.get(author=request.user,id=i)
+        e.delete()
+    return HttpResponse(i)
+
+def delSave(request):
+    if request.user.is_authenticated() and request.user.is_active and request.method == "POST":
+        i=request.POST.get('id')
+        e=Saveq.objects.get(author=request.user,id=i)
+        e.delete()
+    return HttpResponse(i)
 
 def parser(request):
     piz=''
@@ -77,7 +172,7 @@ def parser(request):
     text = BeautifulSoup(text)
     a=text.findAll('a',{'class':'left'})
     for A in a:
-        if str(A.string)=='Show base':
+        if str(A.string)=='Переглянути базу тестів':
             pages=['','?page=2','?page=3','?page=4']
             for i in pages:
                 text=ul.urlopen(str(A['href'])+i).read().decode('utf-8')
@@ -87,10 +182,10 @@ def parser(request):
                 text=BeautifulSoup(text)
                 tt=str(text.find('div',{'class','krok_title'}))
 
-                langvege = Lang.objects.get(code='eng')
+                langvege = Lang.objects.get(code='ukr')
                 bk=tt[tt.rfind('<br>')+4:tt.find('</br>')]
                 cl=tt[tt.rfind('<small>')+7:tt.find('</small>')]
-                cl=Classes.objects.get(id=30)
+                cl=Classes.objects.get(id=37)
                 try:
                     bk=Booklets.objects.get(title=bk,classes=cl,lang=langvege)
                 except Booklets.DoesNotExist:
@@ -145,15 +240,31 @@ def parser(request):
 
 
 def abcc(request):
-    b=Booklet.objects.all()[37000:]
-    for i in b:
-        i.reply_1=i.reply_1.strip()
-        i.reply_2=i.reply_2.strip()
-        i.reply_3=i.reply_3.strip()
-        i.reply_4=i.reply_4.strip()
-        i.reply_5=i.reply_5.strip()
-        i.save()
-
+    l=Lang.objects.get(code='ukr')
+    cl=Classes.objects.get(id=37)
+    boo2=Booklets.objects.filter(classes=cl,lang=l)
+    for boo in boo2:
+        b2=Booklet.objects.filter(booklet=boo)
+        for b in b2:
+                if b.reply_1.find('ss="new_answer" style="font-weight:bold;">')!=-1:
+                    b.reply_1=b.reply_1.replace('ss="new_answer" style="font-weight:bold;">','')
+                if b.reply_2.find('ss="new_answer" style="font-weight:bold;">') != -1:
+                    a = str(b.reply_1.replace('ss="new_answer" style="">', ''))
+                    b.reply_1 = b.reply_2.replace('ss="new_answer" style="font-weight:bold;">', '')
+                    b.reply_2=a
+                if b.reply_3.find('ss="new_answer" style="font-weight:bold;">') != -1:
+                        a = str(b.reply_1.replace('ss="new_answer" style="">', ''))
+                        b.reply_1 = b.reply_3.replace('ss="new_answer" style="font-weight:bold;">', '')
+                        b.reply_3 = a
+                if b.reply_4.find('ss="new_answer" style="font-weight:bold;">') != -1:
+                            a = str(b.reply_1.replace('ss="new_answer" style="">', ''))
+                            b.reply_1 = b.reply_4.replace('ss="new_answer" style="font-weight:bold;">', '')
+                            b.reply_4 = a
+                if b.reply_5.find('ss="new_answer" style="font-weight:bold;">') != -1:
+                                a =str(b.reply_1.replace('ss="new_answer" style="">', ''))
+                                b.reply_1 = b.reply_5.replace('ss="new_answer" style="font-weight:bold;">', '')
+                                b.reply_5 = a
+                b.save()
     return render(request, 'apka/index.html', {})
 
 logging.basicConfig(

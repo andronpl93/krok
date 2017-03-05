@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Lang(models.Model):
     title=models.CharField('прим. Українською мовою',max_length=100)
@@ -54,15 +55,12 @@ class Booklet(models.Model):
 
 
 class Panel(models.Model):
-    t1=models.CharField('',max_length=300)
-    t2=models.CharField('',max_length=300)
-    t3=models.CharField('',max_length=300)
-    t4=models.CharField('',max_length=300)
-    t5=models.CharField('',max_length=300)
-    t6=models.CharField('',max_length=300)
-    t7=models.CharField('',max_length=300)
-    t8=models.CharField('',max_length=300)
-    t9=models.CharField('',max_length=300)
+    t1=models.CharField('ПРосмотр',max_length=300)
+    t2=models.CharField('Скачать',max_length=300)
+    t3=models.CharField('Без тестов ',max_length=300)
+    t4=models.CharField('Ошибки',max_length=300)
+    t5=models.CharField('Сохрі',max_length=300)
+
     lang = models.ForeignKey(Lang, on_delete=models.PROTECT,null=True)
 
 class bottomLang(models.Model):
@@ -70,3 +68,21 @@ class bottomLang(models.Model):
     t2=models.CharField('Розповчати навчання',max_length=300)
     t3=models.CharField('Переглянути базу',max_length=300)
     lang = models.ForeignKey(Lang, on_delete=models.PROTECT, null=True)
+
+class Saveq(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    que= models.OneToOneField(Booklet,on_delete=models.CASCADE)
+
+class Errors(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    que = models.OneToOneField(Booklet, on_delete=models.CASCADE)
+
+
+class Content(models.Model):
+    lang = models.ForeignKey(Lang, on_delete=models.PROTECT, null=True)
+    notone = models.CharField('Ни одного теста не найдено',max_length=500)
+    error_1 = models.CharField('нет ошибок',max_length=500)
+    error_2 = models.CharField('Зарегайся мразь',max_length=500)
+    save_1 = models.CharField('Нихера не сохранил',max_length=500)
+    save_2 = models.CharField('Войди сука шоб сохранять',max_length=500)
+    login = models.CharField('Зайди в соцсеть пидор',max_length=500)

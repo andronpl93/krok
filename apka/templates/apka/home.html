@@ -12,7 +12,7 @@
 <section>
     <div id="nav">
             {%for l in li%}
-               <a href="krok/{{l.id}}/show" class="lis">
+               <a href="show/{{l.id}}" class="lis">
                    {%ifequal 'ukr' globLang %}{{ l.ukr }} {%endifequal%}
                    {%ifequal 'rus' globLang %}{{ l.rus }} {%endifequal%}
                    {%ifequal 'eng' globLang %}{{ l.eng }} {%endifequal%}

@@ -4,33 +4,18 @@
     <link rel="stylesheet" href="{% static 'css/tests/show.css' %}">
 {%endblock%}
 
-{% block back%} <a href="/show{{num}}" id="back"><img src="{%static 'img/back.gif'%}">Назад</a>{%endblock%}
-
 {%block book%}
 <section id="content2">
-    <h2>{{b.title}}</h2>
-    <div id ='coun'>
-        Число вопросов:
-        <select>
-            {%for r in ran%}
-                <option>{{r}}</option>
-            {%endfor%}
-            <option selected>200</option>
-
-        </select>
-    </div>
-    <hr/>
+{% if user.is_authenticated%}
 <ul style="list-style-type:decimal;">
-   {%for q in tests%}
+   {%for m in tests%}
     <li>
-        {% if user.is_authenticated%}
-             <img class="star" src="{%static 'img/star.gif'%}" data-index="{{q.id}}" alt="Сохранить вопрос" title="Сохранить вопрос"/>
-        {%endif%}
+        <img class="close" src="{%static 'img/close.gif'%}" data-l='sav' data-index="{{m.id}}" alt="Удалить из списка" title="Удалить из списка"/>
         {% autoescape off %}
-            <span>{{q.title}}</span>
+            <span>{{m.title}}</span>
         {% endautoescape %}
         <ul style="list-style-type:upper-alpha;">
-            {%for i in q.m %}
+            {%for i in m.m %}
                 <li class="{{i.c}}">
                     {% autoescape off  %}
                         <span>{{i.r}}</span>
@@ -41,11 +26,20 @@
         <div class="line"></div>
         <br/>
     </li>
+    {%empty%}
+     {% autoescape off  %}
+        {{content.save_1}}
+    {% endautoescape %}
     {%endfor%}
 
 </ul>
 
     <div class="line"></div>
+{% else %}
+    {% autoescape off  %}
+        {{content.save_2}}
+    {% endautoescape %}
+{%endif%}
 </section>
 
 
@@ -54,4 +48,5 @@
 
         {%block script2%}
              <script src="{% static 'js/tests/training.js' %}"></script>
+             <script src="{% static 'js/error-save.js' %}"></script>
         {%endblock%}

@@ -2,33 +2,31 @@
 {% load static %}
 {%block link%}
     <link rel="stylesheet" href="{% static 'css/booklet.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tests/star.css' %}">
     {%block link2%}{%endblock%}
 {%endblock%}
 
 {% block title%}{{title}}{% endblock%}
-
+{% block back%} <a href="/" id="back"><img src="{%static 'img/back.gif'%}">Назад</a>{%endblock%}
 
 
 {% block content%}
 
 <nav>
-    <a  href="/krok/{{num}}/show">{{linkPanel.t1}}</a>
-    <a href="/krok/{{num}}/download">{{linkPanel.t2}}</a>
-    <a href="/krok/{{num}}/view">{{linkPanel.t3}}</a>
-    <a href="/krok/{{num}}/error-list">{{linkPanel.t4}}</a>
-    <a href="/krok/{{num}}/save">{{linkPanel.t5}}</a>
-    <a href="/krok/{{num}}/search">{{linkPanel.t6}}</a>
-    <a href="/krok/{{num}}/faq">{{linkPanel.t7}}</a>
-    <a href="/krok/{{num}}/blank">{{linkPanel.t8}}</a>
-    <a href="/krok/{{num}}/prepare">{{linkPanel.t9}}</a>
+    <a  href="/show{{num}}" data-href="show">{{linkPanel.t1}}</a>
+    <a href="/krok/{{num}}/download" data-href="download">{{linkPanel.t2}}</a>
+    <a href="/krok/{{num}}/view" data-href="view">{{linkPanel.t3}}</a>
+    <a href="/error-list" data-href="error-list">{{linkPanel.t4}}</a>
+    <a href="/save" data-href="save">{{linkPanel.t5}}</a>
 </nav>
 
-
+<img id="toTop" src="{%static 'img/toUp.gif' %}">
     {%block book%}{%endblock%}
 
 {%endblock%}
        {%block script%}
                 <script src="{% static 'js/booklet.js' %}"></script>
+                <script src="{% static 'js/tests/star.js' %}"></script>
         {%block script2%} {%endblock%}
         {%endblock%}
 

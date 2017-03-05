@@ -1,6 +1,6 @@
 #content2{
     width: 60%;
-    margin: 8.5% 27%;
+    margin: 10% 27%;
     background:#EDEEF0 url('../../img/bg.png');
     padding: 3%;
     box-shadow: 5px 5px 30px rgba(0,0,0,0.6);
@@ -21,6 +21,7 @@ li span{
  font-size: 150%;
  display: block;
  width: 95%;
+
 }
 #content2>ul>li{
     margin-bottom: 1%;
@@ -28,6 +29,7 @@ li span{
     text-align:justify;
     box-shadow: 7px 7px 4px -5px rgba(0,0,0,0.5);
      transition: all 1s ease;
+        position:relative;
 }
 #content2>ul>li.actLi{
     box-shadow: 7px 7px 4px -5px rgba(181,221,255,1);
@@ -48,6 +50,8 @@ li span{
     width: 94;
     font-size: 90%;
     line-height: 1.5em;
+
+
 }
 #content2 ul li ul li{
    transition: all 0.3s ease;
@@ -125,4 +129,13 @@ li span{
 }
 .bt:hover .b,.bt:hover .d{
     width:103%;
+}
+.fa{
+    background-color: rgba(255,0,0,0.4);
+}
+.Tr{
+    background-color: rgba(0,160,0,0.4);
+}
+#er{
+    font-size: 140%;
 }
