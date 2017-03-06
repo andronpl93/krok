@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.core.exceptions import ObjectDoesNotExist
 import urllib.request as ul
 from .models import Lang,Classes,Booklets,Booklet,Panel,bottomLang,Saveq,Errors,Content,Files
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 import logging
 import json
 from random import shuffle
