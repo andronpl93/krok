@@ -8,7 +8,8 @@
     <meta name="description" content="Тестування крок">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href="{% static 'css/header.css' %}" rel='stylesheet' type='text/css'>
-    {% block link %} {% endblock %}
+        {% block link %} {% endblock %}
+    <link href="{% static 'css/media.css' %}" rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}"/>
 
 </head>
@@ -21,7 +22,7 @@
 
     {% if user.is_authenticated%}
         <div id="logout">
-            {{user.first_name}} {{user.last_name}}<br/>
+            {{user.first_name}}
             <form  method="post" action="{% url 'account_logout' %}">
                     {% csrf_token %}
                     {% if redirect_field_value %}
@@ -32,9 +33,9 @@
         </div>
     {%else%}
         <a href ='/login/' id="register">
-             <p>Войти</p>
-             <img src="{%static 'img/enter.gif' %}" id="ent_img" />
 
+            <img src="{%static 'img/enter.gif' %}" id="ent_img" /><br/>
+            <p>Войти</p>
         </a>
     {%endif%}
 

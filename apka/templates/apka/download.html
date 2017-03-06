@@ -1,0 +1,32 @@
+{% extends "apka\booklet.html" %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+{%block link2%}
+    <link rel="stylesheet" href="{% static 'css/book.css' %}">
+{%endblock%}
+
+
+
+{%block book%}
+    <section id="content2">
+    {%for b in bl %}
+        {%if forloop.first%}
+        <div class="list">
+            <span> {%ifequal 'ukr' globLang %}{{ b.classes.ukr }} {%endifequal%}
+                   {%ifequal 'rus' globLang %}{{ b.classes.rus }} {%endifequal%}
+                   {%ifequal 'eng' globLang %}{{ b.classes.eng }} {%endifequal%}</span>
+
+        </div>
+        {%endif%}
+        <div class="down">
+            <a href="{{STATIC_PREFIX}}download/{{b.files}}"> <img src="{%static 'img/pdf.png'%}" class='imPdf' />{{b.files|slice:'3:'}}</a>
+        </div>
+
+     {%empty%}
+       <div >
+            <span>{% autoescape off  %}{{content.notDown}}{% endautoescape  %}</span>
+       </div>
+    {%endfor%}
+        </section>
+{%endblock%}
+

@@ -42,7 +42,7 @@
 
      {%empty%}
        <div class="list">
-            <span>{{content.notone}}</span>
+            <span>{% autoescape off  %}{{content.notone}}{% endautoescape  %}</span>
        </div>
     {%endfor%}
         </section>

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Classes, Lang, Booklets,Booklet,Panel,bottomLang,Saveq, Errors,Content
+from .models import Classes, Lang, Booklets,Booklet,Panel,bottomLang,Saveq, Errors,Content,Files
 
 
 admin.site.register(Classes)
@@ -11,3 +11,4 @@ admin.site.register(bottomLang)
 admin.site.register(Saveq)
 admin.site.register(Errors)
 admin.site.register(Content)
+admin.site.register(Files)

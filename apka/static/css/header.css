@@ -23,13 +23,13 @@ ul,#register{
     float: right;
 }
 header ul {
-    width: 25%;
+    width: 30%;
     padding: 0;
     height: 100%;
     transition: all 3s ease;
 }
 header ul li{
-     width: 31%;
+     width: 30%;
      margin: 0 1%;
      height: 102%;
      float: left;
@@ -76,16 +76,21 @@ header ul li:hover{
 
 header ul li img{
     padding-top: 7%;
-    width: 11vh;
+    width: 75%;
 
 }
 #register{
     display: block;
     height: 100%;
-    width: 12%;
+    width: 15%;
     float: right;
-    padding: 0 1%;
+    padding: 0%;
     color:#000;
+    display: flex;
+    flex-wrap: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 header ul li.testsL{
     opacity: 0.5;
@@ -95,8 +100,8 @@ header ul li.testsL{
 
 }
 #ent_img{
-MARGIN-TOP: 2vh;
-    width: 8vh;
+    MARGIN-TOP: 8%;
+    width: 35%;
     margin-right: 5%;
 
 }
@@ -106,11 +111,17 @@ MARGIN-TOP: 2vh;
 }
 
 #logout{
+
+    padding: 1% 0 0  1%;
     float: right;
     height: 100%;
-    font-size: 120%;
-    width: 12vw;
+    font-size: 150%;
+    width: 12%;
     color:#FFDD00;
+    flex-wrap: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     font-weight: bold;
     text-shadow:0 6px 1px rgba(0,0,0,.1),
                0 0 1px rgba(0,0,0,.1),
@@ -127,7 +138,6 @@ MARGIN-TOP: 2vh;
 #logout img{
     padding-top: 7%;
     width: 8vw;
-    margin-left: 15%;
 }
 #logout img:hover{
     cursor: pointer;
@@ -165,20 +175,18 @@ MARGIN-TOP: 2vh;
 #back{
     dispaly: block;
     text-decoration: none;
-    width: 30%;
-    margin:2.5% 0% 2.5% 5%;
+    width: 15%;
+    margin:2.5% 0% 2.5% 0%;
     color: #000;
     font-size: 150%;
-    position: relative;
     opacity: 0.3;
     transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#back img {
-    position: absolute;
-    top:-30%;
-    left: -15%;
-
-    width: 12%;
+#back img{
+    width: 30%;
 }
 #back:hover{
     opacity: 01;

@@ -1,4 +1,4 @@
- #content .list{
+ #content .list,#content2 .list{
       background: #000 url('../img/bgPanel5.gif');
       width:100%;
       height:18vh;
@@ -87,3 +87,31 @@
     width:104%;
 }
 
+.imPdf{
+    width: 10%;
+
+}
+#content2{
+    width: 60%;
+    margin: 15% 27%;
+    background:#EDEEF0 url('../../img/bg.png');
+    padding: 3%;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.6);
+
+
+}
+
+.down{
+      display: flex;
+      justify-content:left;
+      align-items: center;
+      flex-wrap:wrap;
+      font-size: 150%;
+      margin: 2%;
+
+
+}
+.down a {
+    text-decoration: none;
+    color: #000;
+}

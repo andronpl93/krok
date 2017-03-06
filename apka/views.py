@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.core.exceptions import ObjectDoesNotExist
 import urllib.request as ul
-from .models import Lang,Classes,Booklets,Booklet,Panel,bottomLang,Saveq,Errors,Content
+from .models import Lang,Classes,Booklets,Booklet,Panel,bottomLang,Saveq,Errors,Content,Files
 from bs4 import BeautifulSoup
 import logging
 import json
@@ -107,6 +107,16 @@ def save(request):
         mass=[]
     return render(request, 'apka/save.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'tests':mass,'content':content})
 
+def download(request,numCl=-1):
+    linkPanel = Panel.objects.get(lang=lang2)
+    content = Content.objects.get(lang=lang2)
+    if numCl==-1:
+        cl=Classes.objects.first()
+        num=cl.id
+    else:
+        cl=get_object_or_404(Classes,id=numCl)
+    dow=Files.objects.filter(classes=cl,lang=lang2).order_by('-id')
+    return render(request, 'apka/download.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'content':content,'bl':dow})
 
 
 def inspection(request):
@@ -240,31 +250,18 @@ def parser(request):
 
 
 def abcc(request):
-    l=Lang.objects.get(code='ukr')
-    cl=Classes.objects.get(id=37)
-    boo2=Booklets.objects.filter(classes=cl,lang=l)
-    for boo in boo2:
-        b2=Booklet.objects.filter(booklet=boo)
-        for b in b2:
-                if b.reply_1.find('ss="new_answer" style="font-weight:bold;">')!=-1:
-                    b.reply_1=b.reply_1.replace('ss="new_answer" style="font-weight:bold;">','')
-                if b.reply_2.find('ss="new_answer" style="font-weight:bold;">') != -1:
-                    a = str(b.reply_1.replace('ss="new_answer" style="">', ''))
-                    b.reply_1 = b.reply_2.replace('ss="new_answer" style="font-weight:bold;">', '')
-                    b.reply_2=a
-                if b.reply_3.find('ss="new_answer" style="font-weight:bold;">') != -1:
-                        a = str(b.reply_1.replace('ss="new_answer" style="">', ''))
-                        b.reply_1 = b.reply_3.replace('ss="new_answer" style="font-weight:bold;">', '')
-                        b.reply_3 = a
-                if b.reply_4.find('ss="new_answer" style="font-weight:bold;">') != -1:
-                            a = str(b.reply_1.replace('ss="new_answer" style="">', ''))
-                            b.reply_1 = b.reply_4.replace('ss="new_answer" style="font-weight:bold;">', '')
-                            b.reply_4 = a
-                if b.reply_5.find('ss="new_answer" style="font-weight:bold;">') != -1:
-                                a =str(b.reply_1.replace('ss="new_answer" style="">', ''))
-                                b.reply_1 = b.reply_5.replace('ss="new_answer" style="font-weight:bold;">', '')
-                                b.reply_5 = a
-                b.save()
+    l=Lang.objects.get(code='rus')
+    cl=Classes.objects.get(id=36)
+    massY=[i for i in range(2009,2014,1)]
+
+    #massN=['01','02','04','05','06','07','08','09','20','22','24','29']
+   # massN=['07','11','13','15','22','07','08','09','20','22','24','29']
+    massN=['07','09','11','13','15','07','08','09','20','22','24','29']
+    #massN=['06','07','08','10','11','12','13','14','15','17','19','29']
+    for m in range(len(massY)):
+        a=Files(classes=cl,lang=l,files='36/E07t'+str(massN[m])+"_11_"+str(massY[m])+'R.pdf')
+        a.save()
+
     return render(request, 'apka/index.html', {})
 
 logging.basicConfig(

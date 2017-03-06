@@ -57,7 +57,6 @@ class Booklet(models.Model):
 class Panel(models.Model):
     t1=models.CharField('ПРосмотр',max_length=300)
     t2=models.CharField('Скачать',max_length=300)
-    t3=models.CharField('Без тестов ',max_length=300)
     t4=models.CharField('Ошибки',max_length=300)
     t5=models.CharField('Сохрі',max_length=300)
 
@@ -85,4 +84,12 @@ class Content(models.Model):
     error_2 = models.CharField('Зарегайся мразь',max_length=500)
     save_1 = models.CharField('Нихера не сохранил',max_length=500)
     save_2 = models.CharField('Войди сука шоб сохранять',max_length=500)
+    notDown = models.CharField('Скачать', max_length=500, null=True)
     login = models.CharField('Зайди в соцсеть пидор',max_length=500)
+
+class Files(models.Model):
+    classes=models.ForeignKey(Classes,on_delete=models.PROTECT, null=True)
+    files=models.CharField('путь',max_length=300)
+    lang = models.ForeignKey(Lang, on_delete=models.PROTECT, null=True)
+    def __str__(self):
+        return str(self.files)
