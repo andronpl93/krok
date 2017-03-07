@@ -1,7 +1,7 @@
  #content .list,#content2 .list{
       background: #000 url('../img/bgPanel5.gif');
       width:100%;
-      height:18vh;
+      padding:1% 1%;
       margin: 5% 0;
       display: flex;
       justify-content:space-around;
@@ -37,15 +37,15 @@
     display:block;
     float: right;
     position: relative;
-    padding: 1%;
-    margin-bottom: 2%;
-    outline: 4px solid #fff;
+    padding: 12px;
+
     text-align:center;
     color: #fff;
     font-size: 120%;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.5s ease;
+    overflow: hidden;
     text-shadow:0 6px 1px rgba(0,0,0,.1),
                0 0 1px rgba(0,0,0,.1),
                0 0px 1px rgba(0,0,0,.3),
@@ -56,35 +56,50 @@
  }
 .a,.b,.c,.d{
     position: absolute;
+
+    background-color: #fff;
+    z-index: 99;
+}
+.a:before,.b:before,.c:before,.d:before{
     background-color: #FFDD00;
+    transition: all 0.7s ease;
+    position: absolute;
     z-index: 100;
-    transition: all 0.5s ease;
+    content:'';
 }
-.a,.b{
-    top: -4px;
-    left: -4px;
+.a,.a:before,.b:before, .b{
+    top: 0px;
+    left: 0px;
 }
-.c,.d{
-    bottom:-4px;
-    right:-4px;
+.c,.c:before,.d:before,.d{
+    bottom:0px;
+    right:0px;
 }
 
 .c,.a{
+    height: 150%;
+    width:4px;
+}
+.c:before,.a:before{
     height: 0px;
     width:4px;
 }
 .d,.b{
     height: 4px;
-    width:0px;
+    width:150%;
+}
+.d:before,.b:before{
+    height: 4px;
+    width:0;
 }
 .bt:hover{
     color:#FFDD00;
 }
-.bt:hover .a,.bt:hover .c{
-    height:124%;
+.bt:hover .a:before,.bt:hover .c:before{
+    height:154%;
 }
-.bt:hover .b,.bt:hover .d{
-    width:104%;
+.bt:hover .b:before,.bt:hover .d:before{
+    width:120%;
 }
 
 .imPdf{

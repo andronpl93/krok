@@ -3,7 +3,7 @@
 {%block link2%}
     <link rel="stylesheet" href="{% static 'css/tests/show.css' %}">
 {%endblock%}
-{% block back%} <a href="/show{{num}}" id="back"><img src="{%static 'img/back.gif'%}" >Назад</a>{%endblock%}
+{% block back%} <a href="/show{{num}}" id="back"><img src="{%static 'img/back.gif'%}" ></a>{%endblock%}
 {%block book%}
 <section id="content2">
     <h2>{{b.title}}</h2>
@@ -28,7 +28,7 @@
             <span>{{q.question}}</span>
         {% endautoescape %}
         <ul style="list-style-type:upper-alpha;">
-            <li>
+            <li class="Tr">
                 {% autoescape off  %}
                 <b> <span>{{q.reply_1}}</span></b>
                 {% endautoescape %}

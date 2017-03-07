@@ -22,7 +22,7 @@ $('#imSub').click(function(){
 
 });
 
-$('.cent').parents('section,#wrap').css('margin-top','37vh');
+$('.cent').parents('section,#wrap').css('margin-top','31vh');
 /*csrf_token */
 
  function getCookie(name) {

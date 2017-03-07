@@ -15,23 +15,24 @@ header{
     height:12vh;
     background:#EDEEF0 url('../img/bg.png');
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-      overflow: hidden;
+    overflow: hidden;
+
 }
 ul,#register{
-    header: 12vh;
+    header: 100%;
     margin:0;
     float: right;
 }
 header ul {
-    width: 30%;
+    max-width: 30%;
     padding: 0;
     height: 100%;
     transition: all 3s ease;
 }
 header ul li{
-     width: 30%;
+     max-width: 30%;
      margin: 0 1%;
-     height: 102%;
+     height: 100%;
      float: left;
      list-style-type: none;
      overflow: hidden;
@@ -70,27 +71,24 @@ header ul li.active:after{
 
 header ul li:hover{
     cursor: pointer;
-    height: 105%;
     box-shadow: 0px -1px 3px rgba(0,0,0,0.5) inset;
 }
 
 header ul li img{
-    padding-top: 7%;
-    width: 75%;
-
+    header: 100%;
+    max-width: 100%;
 }
 #register{
     display: block;
+    float: right;
     height: 100%;
-    width: 15%;
+    max-width: 15%;
     float: right;
     padding: 0%;
-    color:#000;
-    display: flex;
-    flex-wrap: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
+}
+#register img{
+    height: 100%;
 }
 header ul li.testsL{
     opacity: 0.5;
@@ -99,29 +97,21 @@ header ul li.testsL{
     box-shadow:none;
 
 }
-#ent_img{
-    MARGIN-TOP: 8%;
-    width: 35%;
-    margin-right: 5%;
 
-}
-#register #ent_img,p{
-    float: right;
-    font-size: 160%;
-}
+
 
 #logout{
 
-    padding: 1% 0 0  1%;
+    padding:0 1% ;
     float: right;
     height: 100%;
-    font-size: 150%;
-    width: 12%;
+    font-size: 120%;
+    max-width: 12%;
     color:#FFDD00;
-    flex-wrap: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+
     font-weight: bold;
     text-shadow:0 6px 1px rgba(0,0,0,.1),
                0 0 1px rgba(0,0,0,.1),
@@ -132,15 +122,17 @@ header ul li.testsL{
                0 5px 10px rgba(0,0,0,.15);
 
 }
-#logout botton{
-    border: none;
-}
-#logout img{
-    padding-top: 7%;
-    width: 8vw;
-}
-#logout img:hover{
+
+
+#imSub:hover{
     cursor: pointer;
+}
+#imSub{
+    float: right;
+    display: block;
+    max-height: 100%;
+    max-width: 20%;
+
 }
 
 #glav,#back{
@@ -151,6 +143,8 @@ header ul li.testsL{
     display: block;
     margin-top:0.2%;
     margin-left:2%;
+    margin-right:0;
+
     font-size: 460%;
     width: 20%;
     text-weight:bold;
@@ -161,9 +155,6 @@ header ul li.testsL{
                0 -3px 0 rgb(80,170,200),
                0 -4px 0 rgb(70,150,180),
                0 -5px 0 rgb(60,130,160),
-
-
-
                0 0 5px rgba(0,0,0,.5),
                0 1px 3px rgba(0,0,0,.8),
                0 3px 5px rgba(0,0,0,0.1),
@@ -176,17 +167,16 @@ header ul li.testsL{
     dispaly: block;
     text-decoration: none;
     width: 15%;
-    margin:2.5% 0% 2.5% 0%;
+    margin: 0;
+    padding: 0;
+    height:100%;
     color: #000;
     font-size: 150%;
-    opacity: 0.3;
+    opacity: 0.25;
     transition: all 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 #back img{
-    width: 30%;
+    height:100%;
 }
 #back:hover{
     opacity: 01;

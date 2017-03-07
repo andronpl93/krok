@@ -2,207 +2,135 @@
 @media screen and (orientation: landscape) {
 
    @media  (min-aspect-ratio: 1/1) { /*1*/
+
+        header{
+            height:7vh;
+        }
+        #glav{
+            font-size: 330%;
+        }
+        #wrap #nav{
+            width: 65%;
+        }
+        .cent{
+            font-size: 150%;
+        }
+    }
+   @media  (min-aspect-ratio: 11/10) { /*1.1*/
         header{
             height:8vh;
         }
-        #logout{
-            font-size: 100%;
-        }
-        #wrap #nav{
-            font-size: 150%;
-            width:70%;
-        }
-        #content .list{
-          height:16vh;
-          margin: 5% 0;
-          box-shadow: 2px 4px 15px rgba(0,0,0,0.7);
-        }
-        .list    span{
-            font-size: 250%;
-            text-align: center;
-
-        }
-         .bt{
-            padding: 1%;
-            margin-bottom: 2%;
-            outline: 4px solid #fff;
-            font-size: 120%;
-         }
-
-    }
-   @media  (min-aspect-ratio: 11/10) { /*1.1*/
 
         #wrap #nav{
+            width: 55%;
+        }
+        #glav{
+            font-size: 380%;
+        }
+        .cent{
             font-size: 150%;
-            width:70%;
-        }
-        #content .list{
-          height:16vh;
-          margin: 5% 0;
-          box-shadow: 2px 4px 15px rgba(0,0,0,0.7);
-        }
-        .list    span{
-            font-size: 250%;
-            text-align: center;
-
-        }
-         .bt{
-            padding: 1%;
-            margin-bottom: 2%;
-            outline: 4px solid #fff;
-            font-size: 120%;
-         }
-         #back{
-            margin:2% 0% 2.5% 0%;
-        }
-        #wrap #start{
-            font-size: 120%;
         }
 
    }
 
    @media  (min-aspect-ratio: 15/10) { /*1.5*/
-
+        body{
+            font-size: 150%;
+        }
         header{
-            height:8vh;
-        }
-        #logout{
-            width: 10%;
-            font-size: 90%;
-        }
-        #logout img{
-            width: 35%;
-        }
-        #ent_img{
-            width: 25%;
-        }
-        header ul li img{
-            padding-top: 7%;
-            width: 50%;
-
+            height:10vh;
         }
         #wrap #nav{
-            font-size: 150%;
-            width:60%;
+            width: 50%;
         }
-        #content .list{
-          height:17vh;
-          margin: 5% 0;
-          box-shadow: 2px 4px 15px rgba(0,0,0,0.7);
+        #glav{
+            font-size: 350%;
         }
-         .bt{
-            margin-bottom: 1%;
-            outline: 4px solid #fff;
-            font-size: 150%;
-         }
-         #back{
-            margin:1% 0% 2.5% 0%;
-         }
-         #back img{
-            width:22%;
-         }
-         #wrap #start{
-            font-size: 130%;
-         }
+        #content{
+            margin-left: 30%;
+            width: 60%;
+        }
+        #wrap section#start{
+            font-size: 100%;
+            width: 90%;
+        }
+
+        #wrap nav{
+            font-size: 80%;
+        }
+        #wrap section:before,#wrap section:after{
+            bottom: 35px;
+        }
+        body{
+            font-size: 90%;
+        }
+
+
    }
    @media  (min-aspect-ratio: 162/100) { /*1.62*/
+        body{
+            font-size: 90%;
+        }
+        #glav{
+            font-size: 310%;
+        }
+        #glav{
+            font-size: 290%;
+        }
 
-         #ent_img{
-            width: 20%;
-         }
-         #wrap #nav{
-            font-size: 150%;
-            width:50%;
-         }
-         #wrap #start{
-            font-size: 140%;
-         }
-         #wrap section:after,#wrap section:before{
-            bottom:30px;
-         }
-         #content .list{
-            height:18vh;
-         }
-         #glav{
-            font-size: 430%;
-         }
 
    }
-   @media  (min-aspect-ratio: 18/10) { /*1.8*/
 
-         #ent_img{
-            width: 20%;
-         }
-         #wrap #nav{
-            font-size: 150%;
-            width:50%;
-         }
-         #wrap #start{
-            font-size: 140%;
-         }
-         #content .list{
-            height:22vh;
-         }
-         #back{
-            margin:0.5% 0% 2.5% 0%;
-         }
-         #glav{
-            font-size: 260%;
-         }
-         .bt{
-            margin-bottom: 1%;
-            outline: 4px solid #fff;
-            font-size: 130%;
-         }
+   @media  (min-aspect-ratio: 18/10) { /*1.8*/
+        body{
+            font-size: 120%;
+        }
+        header{
+            height:11vh;
+        }
+        #glav{
+            font-size: 350%;
+        }
+
 
 
    }
    @media  (min-aspect-ratio: 2/1) {
 
-         #back img{
-            width:20%;
-         }
-         #ent_img{
-            margin-top:0;
-            width: 18%;
-         }
-         #wrap section{
-            width: 80%;
-         }
-         #wrap #content{
-            width: 70%;
-         }
-         #wrap #content2{
-            width: 60%;
-         }
-         #back{
-            margin:0.6% 0% 2.5% 0%;
-         }
+        body{
+            font-size: 170%;
+        }
+        header ul li.active:after,header ul li.active:before{
+            box-shadow: 0 0 25px #000;
+        }
+        #glav{
+            font-size: 350%;
+        }
+
    }
    @media  (min-aspect-ratio: 265/100) { /*1.62*/
-         #wrap #nav{
-            font-size: 150%;
-            width:50%;
-         }
-         #wrap #start{
-            font-size: 160%;
-         }
-         #wrap section:after,#wrap section:before{
-            bottom:40px;
-         }
-         header{
-            height:12vh;
-         }
-         #glav{
-            font-size: 600%;
-         }
-         #wrap #content{
-            margin:8% 0 8% 30% ;
-            width: 55%;
-         }
-         #content .list{
-            height:25vh;
-         }
+       #wrap section:before,#wrap section:after{
+            bottom: 45px;
+        }
+       #wrap #nav{
+            width: 50%;
+       }
+       body{
+            font-size: 190%;
+       }
+       header{
+            height:15vh;
+        }
+       #glav{
+            font-size: 370%;
+       }
+
+   }
+   @media (min-device-width: 2000px){
+    body{
+        font-size: 250%;
+    }
+
    }
 
 
@@ -212,16 +140,56 @@
 
 
 @media screen and (orientation: portrait) {
-
-    .hex{
-      width: 16vh;
-      height: 9vh;
-      margin: 5.5vh 0.7vh 0 0;
-
+    body{
+        font-size: 200%;
     }
-      .back > img{
-                 top:-5.95vh;
-                 left:0;
+    nav {
+        position: static;
+        width:70%;
+        margin: 30% 0;
+    }
+    nav a {
+        width: 100%;
+    }
+    #wrap #nav {
+        width:100%;
+    }
+    section#content,section#content2{
+        width: 80%;
+        margin: 1% auto;
+    }
+    #toTop{
+        left:0;
+        bottom:0;
+        widt:5%;
+    }
+    .bt{
+        width:90%;
+        margin: 2%;
+        float: none;
+    }
+    header{
+        font-size: 70%;
+        height: 5vh;
+    }
+    #glav{
+        font-size: 220%;
+    }
+    #content2 ul{
+        font-size: 140%;
+        display: block;
+        width: 90%;
+    }
+    #coun{
+        font-size: 150%;
+        width: 100%;
+    }
+    #coun select{
+        font-size: 70%;
+        width: 20%;
+    }
+    #content2 > ul > li > ul >  li{
+        padding: 2% 0 ;
     }
 
     @media  (min-aspect-ratio: 1/2) { /*0.5*/
