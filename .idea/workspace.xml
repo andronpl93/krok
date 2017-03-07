@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a6fe5977-f7f2-4d36-9fe0-20b90ea92fb8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/static/css/preloader.css" afterPath="$PROJECT_DIR$/apka/static/css/preloader.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/static/js/tests/show.js" afterPath="$PROJECT_DIR$/apka/static/js/tests/show.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/static/js/tests/base.js" afterPath="$PROJECT_DIR$/apka/static/js/tests/base.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/static/js/tests/training.js" afterPath="$PROJECT_DIR$/apka/static/js/tests/training.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/krok/settings.py" afterPath="$PROJECT_DIR$/krok/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apka/static/js/tests/show.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="46" column="7" lean-forward="false" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+            <state relative-caret-position="289">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apka/static/js/tests/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,8 +116,8 @@
       <file leaf-file-name="training.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apka/static/js/tests/training.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            <state relative-caret-position="391">
+              <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -137,6 +137,7 @@
       <find>head</find>
       <find>nav</find>
       <find>glav</find>
+      <find>sel</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,13 +182,13 @@
         <option value="$PROJECT_DIR$/apka/templates/apka/download.html" />
         <option value="$PROJECT_DIR$/apka/templates/apka/base.html" />
         <option value="$PROJECT_DIR$/apka/views.py" />
-        <option value="$PROJECT_DIR$/apka/static/js/tests/base.js" />
-        <option value="$PROJECT_DIR$/apka/static/js/tests/training.js" />
         <option value="$PROJECT_DIR$/apka/static/css/header.css" />
         <option value="$PROJECT_DIR$/apka/static/css/media.css" />
         <option value="$PROJECT_DIR$/apka/static/css/booklet.css" />
         <option value="$PROJECT_DIR$/apka/static/css/preloader.css" />
         <option value="$PROJECT_DIR$/apka/static/js/tests/show.js" />
+        <option value="$PROJECT_DIR$/apka/static/js/tests/training.js" />
+        <option value="$PROJECT_DIR$/apka/static/js/tests/base.js" />
       </list>
     </option>
   </component>
@@ -734,7 +735,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488915115247</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="адаптивпоправил">
+      <created>1488915838645</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1488915838645</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1111,22 +1119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apka/static/js/tests/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apka/static/js/tests/training.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apka/templates/apka/book.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
@@ -1169,8 +1161,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apka/static/js/tests/show.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="46" column="7" lean-forward="false" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apka/static/js/tests/training.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apka/static/js/tests/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
