@@ -181,3 +181,75 @@ header ul li.testsL{
 #back:hover{
     opacity: 01;
 }
+
+footer{
+    width: 50%;
+    margin: 2% auto;
+    padding: 1%;
+    text-align: center;
+    transition: all 1s ease;
+    position: relative;
+    color: #000;
+    overflow: hidden;
+    opacity: 0.6;
+}
+footer a{
+    color: inherit;
+    text-shadow: inherit;
+
+}
+ footer:hover{
+    color:#FFDD00;
+    text-shadow:0 6px 1px rgba(0,0,0,.1),
+               0 0 1px rgba(0,0,0,.1),
+               0 0px 1px rgba(0,0,0,.3),
+               0 1px 2px rgba(0,0,0,.2),
+               0 2px 5px rgba(0,0,0,.25),
+               0 5px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.15);
+    opacity: 1;
+}
+.a,.b,.c,.d{
+    position: absolute;
+    background-color: #fff;
+    z-index: 99;
+}
+.a:before,.b:before,.c:before,.d:before{
+    background-color: #FFDD00;
+    transition: all 2s ease;
+    position: absolute;
+    z-index: 100;
+    content:'';
+}
+.a,.a:before,.b:before, .b{
+    top: 0px;
+    left: 0px;
+}
+.c,.c:before,.d:before,.d{
+    bottom:0px;
+    right:0px;
+}
+
+.c,.a{
+    height: 150%;
+    width:4px;
+}
+.c:before,.a:before{
+    height: 0px;
+    width:4px;
+}
+.d,.b{
+    height: 4px;
+    width:150%;
+}
+.d:before,.b:before{
+    height: 4px;
+    width:0;
+}
+
+footer:hover .a:before,footer:hover .c:before{
+    height:154%;
+}
+footer:hover .b:before,footer:hover .d:before{
+    width:120%;
+}
