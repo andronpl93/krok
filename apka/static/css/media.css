@@ -13,6 +13,13 @@
         .cent{
             font-size: 150%;
         }
+        #wrap nav{
+            font-size: 50%;
+        }
+       .bt{
+            font-size: 60%;
+       }
+
     }
    @media  (min-aspect-ratio: 11/10) { /*1.1*/
         header{
@@ -50,7 +57,7 @@
         }
 
         #wrap nav{
-            font-size: 100%;
+            font-size: 70%;
         }
         #wrap section:before,#wrap section:after{
             bottom: 35px;
@@ -59,19 +66,21 @@
             font-size: 90%;
         }
         .bt{
-            font-size: 150%;
+            font-size: 90%;
         }
+        #wrap{
 
+            }
    }
    @media  (min-aspect-ratio: 162/100) { /*1.62*/
         body{
             font-size: 90%;
         }
         #wrap nav{
-            font-size: 100%;
+            font-size: 80%;
        }
         .bt{
-            font-size: 150%;
+            font-size: 100%;
        }
 
 
@@ -105,7 +114,7 @@
             box-shadow: 0 0 25px #000;
         }
         .bt{
-            font-size: 70%;
+            font-size: 90%;
         }
 
    }
@@ -123,10 +132,10 @@
             height:15vh;
         }
        #wrap nav{
-            font-size: 40%;
+            font-size: 70%;
        }
        .bt{
-            font-size: 70%;
+            font-size: 90%;
        }
 
 
@@ -139,7 +148,7 @@
    }
     @media (max-device-width: 2000px){
         body{
-            font-size: 100%;
+            font-size: 120%;
         }
     }
 
@@ -151,12 +160,13 @@
 
 @media screen and (orientation: portrait) {
     body{
-        font-size: 200%;
+        font-size: 150%;
     }
     nav {
         position: static;
         width:70%;
         margin: 30% 0;
+        font-size: 100%;
     }
     nav a {
         width: 100%;
