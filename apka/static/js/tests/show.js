@@ -47,6 +47,7 @@ $('.bt').click(function(){
         $.ajax(objAjax);
         loader.fadeIn(300);
 
+
 });
 
 
