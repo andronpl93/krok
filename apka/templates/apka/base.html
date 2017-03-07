@@ -7,7 +7,15 @@
 	<title>{%block title%} {%endblock%}</title>
     <meta name="description" content="Тестування крок">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
+    <meta http-equiv="Content-Language" content="ru" />
+    <meta http-equiv="Content-Language" content="uk" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="Cache-Control" content="public" />
+    <meta name="Author" content="Платонов Андрей" />
+    <meta name="description" content="Тестирование КРОК; Тренировка; Просмотр базы; Работа над ошибками; Сохранение вопросов; Адаптивный дизайн; Регистрация через соцсети" />
+    <meta name="Keywords" lang="ru" content="Тестирование КРОК; Тренировка; Просмотр базы; Работа над ошибками; Сохранение вопросов; Адаптивный дизайн; Регистрация через соцсети">
+    <meta name="Keywords" lang="uk" content="Тестування КРОК; Тренування; Перегляд бази; Робота над помилками; Збереження питань; Адаптивний дизайн; Реєстрація через соцмережі">
+    <meta name="Keywords" lang="en" content="Testing the CRIC; Training; View the database; Work on bugs; Preservation of issues; Adaptive design; Registration through social networks">
     <link href="{% static 'css/header.css' %}" rel='stylesheet' type='text/css'>
         {% block link %} {% endblock %}
     <link href="{% static 'css/media.css' %}" rel='stylesheet' type='text/css'>
@@ -38,14 +46,14 @@
     {%else%}
         <a href ='/login/' id="register">
 
-            <img src="{%static 'img/enter.gif' %}" id="ent_img" /><br/>
+            <img src="{%static 'img/enter.gif' %}" id="ent_img" alt="Вход"/><br/>
         </a>
     {%endif%}
 
     <ul>
         {% for l in lang %}
             <li data-index="{{l.code}}" {%ifequal l.code globLang %} class="active" {%endifequal%}>
-                        <img src="{{STATIC_PREFIX}}img/{{l.img}}" class='lang_img'/>
+                        <img src="{{STATIC_PREFIX}}img/{{l.img}}" class='lang_img' alt="{{l.img}}"/>
             </li>
         {% endfor %}
     </ul>
@@ -61,7 +69,7 @@
                 <div class="d"></div>
 </footer>
 </body>
-    <script> <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43292909 = new Ya.Metrika({ id:43292909, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/43292909" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --></script>
+    <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43292909 = new Ya.Metrika({ id:43292909, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/43292909" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
     <script src="{% static 'js/jquery_1_9_2.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
     {%block script%} {%endblock%}

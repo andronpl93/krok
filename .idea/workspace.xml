@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6fe5977-f7f2-4d36-9fe0-20b90ea92fb8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apka/static/img/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/static/css/header.css" afterPath="$PROJECT_DIR$/apka/static/css/header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/static/css/home.css" afterPath="$PROJECT_DIR$/apka/static/css/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/static/css/tests/show.css" afterPath="$PROJECT_DIR$/apka/static/css/tests/show.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/templates/apka/base.html" afterPath="$PROJECT_DIR$/apka/templates/apka/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/templates/apka/book.html" afterPath="$PROJECT_DIR$/apka/templates/apka/book.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/templates/apka/booklet.html" afterPath="$PROJECT_DIR$/apka/templates/apka/booklet.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/templates/apka/download.html" afterPath="$PROJECT_DIR$/apka/templates/apka/download.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/templates/apka/errors.html" afterPath="$PROJECT_DIR$/apka/templates/apka/errors.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/templates/apka/home.html" afterPath="$PROJECT_DIR$/apka/templates/apka/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/templates/apka/login.html" afterPath="$PROJECT_DIR$/apka/templates/apka/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/templates/apka/save.html" afterPath="$PROJECT_DIR$/apka/templates/apka/save.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/templates/apka/tests/base.html" afterPath="$PROJECT_DIR$/apka/templates/apka/tests/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apka/templates/apka/tests/show.html" afterPath="$PROJECT_DIR$/apka/templates/apka/tests/show.html" />
@@ -32,11 +26,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apka/templates/apka/tests/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apka/templates/apka/tests/show.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="training.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apka/templates/apka/tests/training.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+            <state relative-caret-position="-330">
+              <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -44,26 +58,6 @@
       </file>
       <file leaf-file-name="booklet.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apka/templates/apka/booklet.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="download.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apka/templates/apka/download.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="errors.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apka/templates/apka/errors.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
@@ -82,16 +76,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apka/templates/apka/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="67" lean-forward="false" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apka/templates/apka/login.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,21 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="save.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apka/templates/apka/save.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apka/templates/apka/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="17" column="183" lean-forward="false" selection-start-line="17" selection-start-column="183" selection-end-line="17" selection-end-column="183" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#noscript#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -124,12 +98,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="save.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apka/templates/apka/save.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="book.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apka/templates/apka/book.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apka/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="37" column="81" lean-forward="false" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="81" />
+              <folding>
+                <element signature="e#7125#7350#0" expanded="false" />
+                <element signature="e#7378#7602#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,7 +170,6 @@
         <option value="$PROJECT_DIR$/apka/static/js/booklet.js" />
         <option value="$PROJECT_DIR$/apka/models.py" />
         <option value="$PROJECT_DIR$/apka/urls.py" />
-        <option value="$PROJECT_DIR$/apka/views.py" />
         <option value="$PROJECT_DIR$/krok/__init__.py" />
         <option value="$PROJECT_DIR$/apka/admin.py" />
         <option value="$PROJECT_DIR$/krok/settings.py" />
@@ -184,18 +180,19 @@
         <option value="$PROJECT_DIR$/apka/static/css/media.css" />
         <option value="$PROJECT_DIR$/apka/static/css/home.css" />
         <option value="$PROJECT_DIR$/apka/static/css/tests/show.css" />
-        <option value="$PROJECT_DIR$/apka/templates/apka/base.html" />
         <option value="$PROJECT_DIR$/apka/static/css/header.css" />
         <option value="$PROJECT_DIR$/apka/templates/apka/home.html" />
+        <option value="$PROJECT_DIR$/apka/templates/apka/booklet.html" />
+        <option value="$PROJECT_DIR$/apka/templates/apka/errors.html" />
+        <option value="$PROJECT_DIR$/apka/templates/apka/login.html" />
+        <option value="$PROJECT_DIR$/apka/templates/apka/download.html" />
+        <option value="$PROJECT_DIR$/apka/templates/apka/save.html" />
+        <option value="$PROJECT_DIR$/apka/templates/apka/book.html" />
+        <option value="$PROJECT_DIR$/apka/views.py" />
         <option value="$PROJECT_DIR$/apka/templates/apka/tests/base.html" />
         <option value="$PROJECT_DIR$/apka/templates/apka/tests/show.html" />
         <option value="$PROJECT_DIR$/apka/templates/apka/tests/training.html" />
-        <option value="$PROJECT_DIR$/apka/templates/apka/book.html" />
-        <option value="$PROJECT_DIR$/apka/templates/apka/booklet.html" />
-        <option value="$PROJECT_DIR$/apka/templates/apka/download.html" />
-        <option value="$PROJECT_DIR$/apka/templates/apka/errors.html" />
-        <option value="$PROJECT_DIR$/apka/templates/apka/login.html" />
-        <option value="$PROJECT_DIR$/apka/templates/apka/save.html" />
+        <option value="$PROJECT_DIR$/apka/templates/apka/base.html" />
       </list>
     </option>
   </component>
@@ -651,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488849905478</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="слеши поменял">
+      <created>1488902204899</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1488902204899</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -689,7 +693,8 @@
     <MESSAGE value="pdf" />
     <MESSAGE value="sql" />
     <MESSAGE value="набросал ебучий адаптив" />
-    <option name="LAST_COMMIT_MESSAGE" value="набросал ебучий адаптив" />
+    <MESSAGE value="слеши поменял" />
+    <option name="LAST_COMMIT_MESSAGE" value="слеши поменял" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -715,6 +720,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="43" column="56" lean-forward="false" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+          <folding>
+            <element signature="e#7125#7350#0" expanded="false" />
+            <element signature="e#7378#7602#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -765,6 +774,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#7125#7350#0" expanded="false" />
+            <element signature="e#7378#7602#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -845,13 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apka/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -961,68 +967,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apka/templates/apka/tests/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apka/templates/apka/tests/insp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="47" lean-forward="false" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apka/templates/apka/tests/show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apka/templates/apka/tests/training.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apka/templates/apka/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#noscript#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apka/templates/apka/book.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apka/templates/apka/booklet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apka/templates/apka/download.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1035,10 +983,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apka/templates/apka/home.html">
+    <entry file="file://$PROJECT_DIR$/apka/templates/apka/download.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+        <state relative-caret-position="357">
+          <caret line="21" column="75" lean-forward="false" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
           <folding />
         </state>
       </provider>
@@ -1061,9 +1009,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apka/templates/apka/save.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apka/templates/apka/booklet.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apka/templates/apka/book.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apka/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="37" column="81" lean-forward="false" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="81" />
+          <folding>
+            <element signature="e#7125#7350#0" expanded="false" />
+            <element signature="e#7378#7602#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apka/templates/apka/tests/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apka/templates/apka/tests/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apka/templates/apka/tests/training.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apka/templates/apka/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apka/templates/apka/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="183" lean-forward="false" selection-start-line="17" selection-start-column="183" selection-end-line="17" selection-end-column="183" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#noscript#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

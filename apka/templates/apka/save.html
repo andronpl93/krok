@@ -3,7 +3,7 @@
 {%block link2%}
     <link rel="stylesheet" href="{% static 'css/tests/show.css' %}">
 {%endblock%}
-
+{%block title%}Сохраненные вопросы{%endblock%}
 {%block book%}
 <section id="content2">
 {% if user.is_authenticated%}

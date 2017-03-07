@@ -19,7 +19,7 @@
         </div>
         {%endif%}
         <div class="down">
-            <a href="{{STATIC_PREFIX}}download/{{b.files}}"> <img src="{%static 'img/pdf.png'%}" class='imPdf' />{{b.files|slice:'3:'}}</a>
+            <a href="{{STATIC_PREFIX}}download/{{b.files}}" target="_blank"> <img src="{%static 'img/pdf.png'%}" class='imPdf' />{{b.files|slice:'3:'}}</a>
         </div>
 
      {%empty%}
