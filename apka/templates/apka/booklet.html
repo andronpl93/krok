@@ -6,8 +6,8 @@
     {%block link2%}{%endblock%}
 {%endblock%}
 
-{% block title%}{{title}}{% endblock%}
-{% block back%} <a href="/" id="back"><img src="{%static 'img/back.gif'%}"></a>{%endblock%}
+{% block title%}{{cl.title}}{% endblock%}
+{% block back%} <a href="/" id="back"><img src="{%static 'img/back.gif'%}" alt="Назад"></a>{%endblock%}
 
 
 {% block content%}
@@ -19,7 +19,7 @@
     <a href="/save" data-href="save">{{linkPanel.t5}}</a>
 </nav>
 
-<img id="toTop" src="{%static 'img/toUp.gif' %}">
+<img id="toTop" src="{%static 'img/toUp.gif' %}" alt="Наверх">
     {%block book%}{%endblock%}
 
 {%endblock%}

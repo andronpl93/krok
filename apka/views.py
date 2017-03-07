@@ -35,7 +35,7 @@ def show(request,num=-1):
     bl=Booklets.objects.filter(classes=cl,lang=lang2).order_by('id')
     bat=bottomLang.objects.get(lang=lang2)
     return render(request, 'apka/book.html', {'lang':lang,'globLang':globLang,'linkPanel':linkPanel,'num':"/"+str(num),
-                                              'bl':bl,'bat':bat,'content':content})
+                                              'bl':bl,'bat':bat,'content':content,'cl':cl})
 def login(request,num=1):
     content=Content.objects.get(lang=lang2)
     return render(request, 'apka/login.html', {'lang':lang,'globLang':globLang,'content':content})
