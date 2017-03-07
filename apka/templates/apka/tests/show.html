@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
 {%endblock%}
 {% block back%} <a href="/show{{num}}" id="back"><img src="{%static 'img/back.gif'%}" alt="Назад"></a>{%endblock%}
-{%block title%}Тестирование КРОК{%endblock%}
+{%block title%}{{b.title}} | Тест{%endblock%}
 {%block book%}
 <section id="content2">
     <h2>{{b.title}}</h2>

@@ -3,7 +3,10 @@
 {%block link2%}
     <link rel="stylesheet" href="{% static 'css/book.css' %}">
 {%endblock%}
-
+{% block title%}{%ifequal 'ukr' globLang %}{{ titl.ukr }} {%endifequal%}
+                {%ifequal 'rus' globLang %}{{ titl.rus }} {%endifequal%}
+                {%ifequal 'eng' globLang %}{{ titl.eng }} {%endifequal%}
+{% endblock%}
 
 {%block book%}
     <section id="content">
