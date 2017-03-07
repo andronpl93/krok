@@ -2,7 +2,9 @@ mass=[]
 for(var i =0;i<200;i++){
     mass[i]=i;
 }
-$('#content2 select').change(function(){
+sel();
+$('#content2 select').change(sel);
+function sel(){
     $("#content2>ul>li").fadeIn(300);
     //alert(parseInt(200-$(this).val()));
     var a;
@@ -12,8 +14,7 @@ $('#content2 select').change(function(){
          b=randM(massL);
         $("#content2>ul>li").slice(b,b+1).fadeOut(300);
     }
-});
-
+}
 function randM(m){
     while(true){
        a=Math.floor(Math.random()*199);

@@ -50,7 +50,7 @@
         }
 
         #wrap nav{
-            font-size: 80%;
+            font-size: 100%;
         }
         #wrap section:before,#wrap section:after{
             bottom: 35px;
@@ -58,16 +58,21 @@
         body{
             font-size: 90%;
         }
-
+        .bt{
+            font-size: 150%;
+        }
 
    }
    @media  (min-aspect-ratio: 162/100) { /*1.62*/
         body{
             font-size: 90%;
         }
-        #glav{
-            font-size: 310%;
-        }
+        #wrap nav{
+            font-size: 100%;
+       }
+        .bt{
+            font-size: 150%;
+       }
 
 
 
@@ -80,6 +85,12 @@
         header{
             height:11vh;
         }
+        #wrap nav{
+            font-size: 80%;
+       }
+       .bt{
+            font-size: 110%;
+       }
 
 
 
@@ -93,7 +104,9 @@
         header ul li.active:after,header ul li.active:before{
             box-shadow: 0 0 25px #000;
         }
-
+        .bt{
+            font-size: 70%;
+        }
 
    }
    @media  (min-aspect-ratio: 265/100) { /*1.62*/
@@ -109,15 +122,26 @@
        header{
             height:15vh;
         }
+       #wrap nav{
+            font-size: 40%;
+       }
+       .bt{
+            font-size: 70%;
+       }
+
 
 
    }
    @media (min-device-width: 2000px){
     body{
-        font-size: 250%;
+        font-size: 200%;
     }
-
    }
+    @media (max-device-width: 2000px){
+        body{
+            font-size: 100%;
+        }
+    }
 
 
 
@@ -188,45 +212,6 @@
          }
     }
 
-    @media  (min-aspect-ratio: 63/100) { /*0.63*/
-         .hex{
-                width: 19vh;
-                height: 10.9vh;
-                margin: 6.74vh 1.5vh 0 0;
-
-
-         }
-            .back > img{
-                 top:-5.5vh;
-                 left:0;
-         }
-    }
-    @media  (min-aspect-ratio: 4/5) { /*0.8*/
-         .hex{
-                width: 21.0vh;
-                height: 12vh;
-                margin: 7.33vh 1.5vh 0 0;
-
-
-         }
-          .back > img{
-                 top:-6.2vh;
-                 left:0;
-         }
-    }
-    @media  (min-aspect-ratio: 93/100) {  /*0.94*/
-         .hex{
-                width: 22.5vh;
-                height: 13vh;
-                margin: 7.94vh 1.5vh 0 0;
-
-
-         }
-         .back > img{
-                 top:-6.9vh;
-                 left:0;
-         }
-    }
 
 
 

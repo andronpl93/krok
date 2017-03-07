@@ -139,9 +139,13 @@ def inspection(request):
             ans[-1]['m'].append({'cl':'fa','v':t.reply_4}) if   t.reply_4==pakege[k] else ans[-1]['m'].append({'cl':'','v':t.reply_4})
             ans[-1]['m'].append({'cl':'fa','v':t.reply_5}) if   t.reply_5==pakege[k] else ans[-1]['m'].append({'cl':'','v':t.reply_5})
             ans[-1]['id']=t.id
-
-    mTrue=((len(pakege)-len(ans))/len(pakege))*100
-    mFalse=100-mTrue
+    try:
+        mTrue=((len(pakege)-len(ans))/len(pakege))*100
+    except ZeroDivisionError:
+        mTrue=0
+        mFalse = 0
+    else:
+        mFalse=100-mTrue
     return render(request, 'apka/tests/insp.html',{'tr':mTrue,'fa':mFalse,'ans':ans})
 
 def star(request):

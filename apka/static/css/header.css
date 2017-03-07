@@ -140,15 +140,12 @@ header ul li.testsL{
 
 }
 #glav{
-    display: block;
     margin:0 1%;
     height:100%;
-    max-width: 30%;
-    text-weight:bold;
-    color: #81E3FF;
-    text-decoration: none;
 
-
+}
+#glav img{
+        height:100%;
 }
 #back{
     dispaly: block;
